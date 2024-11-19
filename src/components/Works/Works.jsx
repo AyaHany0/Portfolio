@@ -139,7 +139,7 @@ export default function Works() {
             <InterfaceComp
               about="Web Development"
               title="bazel."
-              path=" https://ayahany0.github.io/bazel"
+              path="https://ayahany0.github.io/bazel"
               img={bazel}
             />
           </div>
@@ -147,7 +147,7 @@ export default function Works() {
             <InterfaceComp
               about="Web Development"
               title="VivaDecor"
-              path=" https://ayahany0.github.io/Weather"
+              path="https://ayahany0.github.io/Weather"
               img={weather}
             />
           </div>

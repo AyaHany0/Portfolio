@@ -190,7 +190,7 @@ export default function Contact() {
               </li>
               <li className=" animate-icons p-5 rounded-full bg-card-reverseDark hover:bg-card-light hover:text-black transition-colors duration-200">
                 <a
-                  href="www.linkedin.com/in/aya-hany-8b457a172"
+                  href="https://linkedin.com/in/aya-hany-8b457a172"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

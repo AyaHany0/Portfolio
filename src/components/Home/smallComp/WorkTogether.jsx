@@ -14,7 +14,7 @@ export default function WorkTogether() {
             Work <span className="text-secondary">together.</span>
           </p>
         </div>
-        <Button to={"contact"} />
+        <Button to={"/contact"} />
       </div>
     </div>
   );
