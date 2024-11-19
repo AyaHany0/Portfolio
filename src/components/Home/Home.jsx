@@ -72,7 +72,7 @@ export default function Home() {
       <div className="grid gap-5">
         {/* Row 1 */}
         <div className="row1 grid grid-cols-1 lg:grid-cols-2 gap-5">
-          <div className="animate-first  flex items-center com-card">
+          <div className="animate-first  flex items-center com-card hovering">
             <Profile />
           </div>
           <div className="h-full flex flex-col gap-5">
@@ -82,8 +82,8 @@ export default function Home() {
             </div>
 
             {/* Remaining Row */}
-            <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-5">
-              <div className="animate-first com-card">
+            <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-5 ">
+              <div className="animate-first com-card hovering">
                 <InterfaceComp
                   title="credentials"
                   about="MORE ABOUT ME"
@@ -91,7 +91,7 @@ export default function Home() {
                   img={signature}
                 />
               </div>
-              <div className="animate-first com-card">
+              <div className="animate-first com-card hovering">
                 <InterfaceComp
                   title="projects"
                   about="SHOWCASE"
@@ -105,13 +105,13 @@ export default function Home() {
 
         {/* Row 2 */}
         <div className="row2 grid grid-cols-1 lg:grid-cols-4 gap-5 row-span-1">
-          <div className="animate-first com-card h-full">
+          <div className="animate-first com-card h-full hovering">
             <InterfaceComp title="GFonts" about="BLOG" path="blog" img={blog} />
           </div>
-          <div className="animate-first com-card lg:col-span-2 h-full">
+          <div className="animate-first com-card lg:col-span-2 h-full hovering">
             <InterfaceServices />
           </div>
-          <div className="animate-first com-card h-full">
+          <div className="animate-first com-card h-full hovering">
             <InterfaceConnect />
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function Home() {
           <div className=" animate-late com-card">
             <Statics />
           </div>
-          <div className=" animate-late com-card overflow-hidden">
+          <div className=" animate-late com-card overflow-hidden hovering">
             <WorkTogether />
           </div>
         </div>

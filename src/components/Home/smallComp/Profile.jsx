@@ -1,9 +1,13 @@
 import React from "react";
 import profile from "../../../assets/profile.webp";
 import Button from "../../Button/Button";
+import { Link } from "react-router-dom";
 export default function Profile() {
   return (
-    <div className="flex justify-between items-center gap-5 w-full  ">
+    <Link
+      to="/about"
+      className="flex justify-between items-center gap-5 w-full  group"
+    >
       <div className="bg-card-blue text-center rounded-ss-3xl rounded-ee-3xl overflow-hidden ">
         <img src={profile} alt="Aya's Photo" />
       </div>
@@ -17,10 +21,10 @@ export default function Profile() {
         <p className="text-primary font-body text-md  tracking-wide">
           I'm a web Developer based in Egypt
         </p>
-        <span className="self-end ">
+        <span className="self-end group">
           <Button to="/about" />
         </span>
       </div>
-    </div>
+    </Link>
   );
 }

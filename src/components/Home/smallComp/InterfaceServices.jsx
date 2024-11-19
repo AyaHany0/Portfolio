@@ -3,10 +3,14 @@ import { BsMagic } from "react-icons/bs";
 import { GiMagnifyingGlass } from "react-icons/gi";
 import { MdDashboard, MdOutlineDeveloperMode } from "react-icons/md";
 import Button from "../../Button/Button";
+import { Link } from "react-router-dom";
 
 export default function InterfaceServices() {
   return (
-    <div className="flex flex-col justify-between space-y-2 ">
+    <Link
+      to={"/services"}
+      className="group flex flex-col justify-between space-y-2 "
+    >
       <div>
         <ul className="flex gap-3 text-5xl justify-around my-8 mx-2 items-center">
           <li>
@@ -30,8 +34,11 @@ export default function InterfaceServices() {
             service offering
           </h2>
         </div>
-        <Button to={`/services`} />
+        <Button
+          to={`/services`}
+          className="group-hover:brightness-125 transition-transform duration-300"
+        />
       </div>
-    </div>
+    </Link>
   );
 }

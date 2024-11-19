@@ -26,6 +26,9 @@ export default {
         heading: ["Montserrat", "sans-serif"],
         body: ["Roboto", "sans-serif"],
       },
+      boxShadow: {
+        primary: "1px 2px 10px rgba(255, 255, 255, 0.1)",
+      },
     },
   },
   plugins: [],

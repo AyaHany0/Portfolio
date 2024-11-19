@@ -24,3 +24,8 @@ body {
     @apply bg-card-reverseDark p-5 md:p-6 shadow-2xl rounded-3xl border-border border-[0.5px];
   }
 }
+@layer components {
+  .hovering {
+    @apply hover:shadow-lg hover:shadow-primary transition-shadow duration-300;
+  }
+}

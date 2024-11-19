@@ -1,9 +1,10 @@
 import React from "react";
 import icon from "../../../assets/icon2.png";
 import Button from "../../Button/Button";
+import { Link } from "react-router-dom";
 export default function WorkTogether() {
   return (
-    <div className="flex flex-col justify-between">
+    <Link to="/contact" className="flex flex-col justify-between group">
       <div className="-mt-6 mb-6">
         <img src={icon} alt="star" />
       </div>
@@ -14,8 +15,8 @@ export default function WorkTogether() {
             Work <span className="text-secondary">together.</span>
           </p>
         </div>
-        <Button to={"/contact"} />
+        <Button to={"/contact"} className="group" />
       </div>
-    </div>
+    </Link>
   );
 }

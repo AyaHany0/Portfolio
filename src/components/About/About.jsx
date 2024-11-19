@@ -131,13 +131,13 @@ export default function About() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 row3 ">
-        <div className="animate-late  com-card col-span-1  xl:col-span-1">
+        <div className="animate-late  com-card col-span-1  xl:col-span-1 hovering">
           <InterfaceConnect />
         </div>
-        <div className="animate-late  com-card col-span-1 md:col-span-1 xl:col-span-2  h-full">
+        <div className="animate-late  com-card col-span-1 md:col-span-1 xl:col-span-2  h-full hovering">
           <InterfaceServices />
         </div>
-        <div className="animate-late com-card col-span-1 md:col-span-2 xl:col-span-1">
+        <div className="animate-late com-card col-span-1 md:col-span-2 xl:col-span-1 hovering">
           <InterfaceComp
             title="credentials"
             about="MORE ABOUT ME"
