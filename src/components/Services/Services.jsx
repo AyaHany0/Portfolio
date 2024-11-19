@@ -262,19 +262,22 @@ export default function Services() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 row3  ">
-        <div className="com-card animate-late col-span-1  xl:col-span-1">
+        <div className="com-card animate-late col-span-1  xl:col-span-1 group">
           <InterfaceComp
             title="credentials"
             about="MORE ABOUT ME"
             path="credentials"
             img={signature}
           />
+          <div className="shine-effect"></div>
         </div>
-        <div className="com-card col-span-1 md:col-span-1 xl:col-span-2 overflow-hidden animate-late">
+        <div className="com-card col-span-1 md:col-span-1 xl:col-span-2 overflow-hidden animate-late group">
           <WorkTogether />
+          <div className="shine-effect"></div>
         </div>
-        <div className="com-card h-full animate-late col-span-1 md:col-span-2 xl:col-span-1">
+        <div className="com-card h-full animate-late col-span-1 md:col-span-2 xl:col-span-1 group">
           <InterfaceConnect />
+          <div className="shine-effect"></div>
         </div>
       </div>
     </div>

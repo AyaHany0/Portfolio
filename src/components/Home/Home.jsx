@@ -72,8 +72,9 @@ export default function Home() {
       <div className="grid gap-5">
         {/* Row 1 */}
         <div className="row1 grid grid-cols-1 lg:grid-cols-2 gap-5">
-          <div className="animate-first  flex items-center com-card hovering">
+          <div className="animate-first  flex items-center com-card group">
             <Profile />
+            <div className="shine-effect"></div>
           </div>
           <div className="h-full flex flex-col gap-5">
             {/* Scroll Section */}
@@ -83,21 +84,23 @@ export default function Home() {
 
             {/* Remaining Row */}
             <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-5 ">
-              <div className="animate-first com-card hovering">
+              <div className="animate-first com-card group">
                 <InterfaceComp
                   title="credentials"
                   about="MORE ABOUT ME"
                   path="credentials"
                   img={signature}
                 />
+                <div className="shine-effect"></div>
               </div>
-              <div className="animate-first com-card hovering">
+              <div className="animate-first com-card group">
                 <InterfaceComp
                   title="projects"
                   about="SHOWCASE"
                   path="works"
                   img={screen}
                 />
+                <div className="shine-effect"></div>
               </div>
             </div>
           </div>
@@ -105,24 +108,29 @@ export default function Home() {
 
         {/* Row 2 */}
         <div className="row2 grid grid-cols-1 lg:grid-cols-4 gap-5 row-span-1">
-          <div className="animate-first com-card h-full hovering">
+          <div className="animate-first com-card h-full group">
             <InterfaceComp title="GFonts" about="BLOG" path="blog" img={blog} />
+            <div className="shine-effect"></div>
           </div>
-          <div className="animate-first com-card lg:col-span-2 h-full hovering">
+          <div className="animate-first com-card lg:col-span-2 h-full relative group ">
             <InterfaceServices />
+            <div className="shine-effect"></div>
           </div>
-          <div className="animate-first com-card h-full hovering">
+          <div className="animate-first com-card h-full group relative">
             <InterfaceConnect />
+            <div className="shine-effect"></div>
           </div>
         </div>
 
         {/* Row 3 */}
         <div className="row3 grid grid-cols-1 lg:grid-cols-2 gap-5">
-          <div className=" animate-late com-card">
+          <div className=" animate-late com-card group">
             <Statics />
+            <div className="shine-effect"></div>
           </div>
-          <div className=" animate-late com-card overflow-hidden hovering">
+          <div className=" animate-late com-card overflow-hidden group">
             <WorkTogether />
+            <div className="shine-effect"></div>
           </div>
         </div>
       </div>

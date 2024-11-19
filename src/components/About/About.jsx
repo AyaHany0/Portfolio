@@ -131,19 +131,22 @@ export default function About() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 row3 ">
-        <div className="animate-late  com-card col-span-1  xl:col-span-1 hovering">
+        <div className="animate-late  com-card col-span-1  xl:col-span-1 group">
           <InterfaceConnect />
+          <div className="shine-effect"></div>
         </div>
-        <div className="animate-late  com-card col-span-1 md:col-span-1 xl:col-span-2  h-full hovering">
+        <div className="animate-late  com-card col-span-1 md:col-span-1 xl:col-span-2  h-full group">
           <InterfaceServices />
+          <div className="shine-effect"></div>
         </div>
-        <div className="animate-late com-card col-span-1 md:col-span-2 xl:col-span-1 hovering">
+        <div className="animate-late com-card col-span-1 md:col-span-2 xl:col-span-1 group">
           <InterfaceComp
             title="credentials"
             about="MORE ABOUT ME"
             path="credentials"
             img={signature}
           />
+          <div className="shine-effect"></div>
         </div>
       </div>
     </div>
