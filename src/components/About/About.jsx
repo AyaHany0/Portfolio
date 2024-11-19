@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import profile from "../../assets/profile.webp";
 import icon from "../../assets/icon2.png";
 import star from "../../assets/star-2.png";
-import InterfaceConnect from "../Home/smallComp/interfaceConnect";
+import InterfaceConnect from "../Home/smallComp/InterfaceConnect";
 import InterfaceServices from "../Home/smallComp/InterfaceServices";
 import InterfaceComp from "../Home/smallComp/InterfaceComp";
 import signature from "../../assets/signature.png";

@@ -3,7 +3,7 @@ import Profile from "./smallComp/Profile";
 import InfiniteScroll from "./smallComp/InfiniteScroll";
 import InterfaceComp from "./smallComp/InterfaceComp";
 import InterfaceServices from "./smallComp/InterfaceServices";
-import InterfaceConnect from "./smallComp/interfaceConnect";
+import InterfaceConnect from "./smallComp/InterfaceConnect";
 import WorkTogether from "./smallComp/WorkTogether";
 import Statics from "./smallComp/Statics";
 import blog from "../../assets/gFonts.png";

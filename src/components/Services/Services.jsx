@@ -14,11 +14,12 @@ import star from "../../assets/star-2.png";
 import WorkTogether from "../Home/smallComp/WorkTogether";
 import InterfaceComp from "../Home/smallComp/InterfaceComp";
 import signature from "../../assets/signature.png";
-import InterfaceConnect from "../Home/smallComp/interfaceConnect";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+
+import InterfaceConnect from "../Home/smallComp/InterfaceConnect";
 export default function Services() {
-  const containerRef = useRef(null); // Reference to the parent container
+  const containerRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
