@@ -12,8 +12,6 @@ Welcome to my personal portfolio website! This is not just a showcase of my work
 
 ## 📖 About the Project
 
-![About Page](./src/assets/screenshots/screenshot_tabletsize_about.jpeg)
-
 I created this portfolio to highlight my growth and passion for web development. It’s a space where potential clients, recruiters, and collaborators can explore my work and understand my skills in depth. From animations to interactivity, every element on this website is a result of my focus on delivering an exceptional user experience.
 
 ### 🎨 Purpose & Goals
@@ -22,9 +20,6 @@ I created this portfolio to highlight my growth and passion for web development.
 - **Provide Services Information:** Let visitors know the services I offer in web development.
 - **Streamlined Communication:** An easy-to-use contact form powered by EmailJS to facilitate direct communication.
 - **Interactive Storytelling:** Leveraging animations and interactive elements to tell my story in an engaging way.
-  ![Contact Page](./src/assets/screenshots/screenshot_contact_tabletsize.jpeg)
-  ![Works Page](./src/assets/screenshots/screenshot_mobilesize_works.jpeg)
-  ![Contact Page](./src/assets/screenshots/screenshot_services.jpeg)
 
 ---
 
