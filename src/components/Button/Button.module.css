@@ -1,0 +1,29 @@
+.iconWrapper {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.iconPath {
+  fill: #8b8b8b; /* Default color */
+  stroke: #8b8b8b;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+.iconRect {
+  fill: #8b8b8b;
+  transition: fill 0.3s ease;
+}
+.iconpathStroke {
+  stroke: #8b8b8b;
+  transition: stroke 0.3s ease;
+}
+.iconWrapper:hover .iconPath {
+  fill: #ffffff; /* Hover color */
+  stroke: #ffffff;
+}
+
+.iconWrapper:hover .iconRect {
+  fill: #ffffff;
+}
+.iconWrapper:hover .iconpathStroke {
+  stroke: #ffffff;
+}
