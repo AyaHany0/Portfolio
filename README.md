@@ -132,7 +132,7 @@ Creating this portfolio has been an exciting journey, and I’d like to thank th
 
 I’d love to hear from you! Whether it’s a potential project, a question, or just to say hi, feel free to reach out:
 
-- **Email:** aya.hany@gmail.com
+- **Email:** ayah28603@gmail.com
 - **LinkedIn:** [Aya Hany](https://www.linkedin.com/in/ayahany/)
 
 ---
