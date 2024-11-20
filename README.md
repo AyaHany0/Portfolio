@@ -87,7 +87,7 @@ Before running the project, ensure you have the following installed:
    ```
 4. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ### Building for Production
