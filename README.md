@@ -6,7 +6,8 @@ Welcome to my personal portfolio website! This is not just a showcase of my work
 
 ## 🌐 Live Demo
 
-✨ [Visit My Portfolio](https://portfolio-delta-pied-34.vercel.app/)
+✨ [Visit My Portfolio on Vercel](https://portfolio-delta-pied-34.vercel.app/)
+✨ [Visit My Portfolio on Netlify] (https://ayahsportfolio.netlify.app)
 
 ---
 
@@ -87,7 +88,7 @@ Before running the project, ensure you have the following installed:
    ```
 4. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ### Building for Production
@@ -132,7 +133,7 @@ Creating this portfolio has been an exciting journey, and I’d like to thank th
 
 I’d love to hear from you! Whether it’s a potential project, a question, or just to say hi, feel free to reach out:
 
-- **Email:** aya.hany@gmail.com
+- **Email:** ayah28603@gmail.com
 - **LinkedIn:** [Aya Hany](https://www.linkedin.com/in/ayahany/)
 
 ---
