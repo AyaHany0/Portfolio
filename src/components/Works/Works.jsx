@@ -13,6 +13,9 @@ import games from "../../assets/projects/games.png";
 import weather from "../../assets/projects/weather.png";
 import simon from "../../assets/projects/simon.png";
 import freshcart from "../../assets/projects/freshcart.png";
+import mathil from "../../assets/projects/mathil.png";
+import sjc from "../../assets/projects/sjc.png";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
@@ -54,6 +57,14 @@ export default function Works() {
         <div className="col-span-1 space-y-5 ">
           <div className="com-card  hover:scale-105 transition-all duration-150 ">
             <InterfaceComp
+              about="Web Development"
+              title="sjctanseiq"
+              path="https://sjctanseiq.com"
+              img={sjc}
+            />
+          </div>
+          <div className="com-card  hover:scale-105 transition-all duration-150 ">
+            <InterfaceComp
               title="Blooming"
               about="Web Development"
               path="https://ayahany0.github.io/Blooming/"
@@ -86,6 +97,14 @@ export default function Works() {
           </div>
         </div>
         <div className="gap-5 col-span-2 row-span-1 grid grid-cols-1 lg:grid-cols-2 ">
+          <div className="com-card  hover:scale-105 transition-all duration-150 ">
+            <InterfaceComp
+              title="Mathil"
+              about="Web Development"
+              path="https://testing.mathil.sa/"
+              img={mathil}
+            />
+          </div>
           <div className="justify-between com-card  hover:scale-105 transition-all duration-150 ">
             <InterfaceComp
               about="Web Development"

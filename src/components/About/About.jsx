@@ -108,6 +108,11 @@ export default function About() {
             <p className="text-lg "> Front-End developer </p>
             <span className="text-primary">Web Masters</span>
           </div>
+               <div>
+            <h3 className="text-primary">March 2025 - Present</h3>
+            <p className="text-lg "> Front-End developer </p>
+            <span className="text-primary">Mdarj</span>
+          </div>
         </div>
         <div className="animate-first flex flex-col gap-5 com-card">
           <h2>EDUCATION</h2>
