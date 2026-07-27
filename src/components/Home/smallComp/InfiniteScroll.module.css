@@ -1,0 +1,46 @@
+.scrollContainer {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  font-size: 1rem; /* Adjust size as needed */
+}
+
+.scrollContent {
+  display: inline-flex;
+  animation: scroll 15s linear infinite;
+  align-items: center;
+}
+
+/* Both halves must keep their natural width, or flex would shrink them to fit
+   and -50% would no longer equal exactly one half. */
+.marqueeHalf {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.separator {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move the content left */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* An infinite marquee never idles — it keeps the compositor working for as
+     long as the page is open, which is exactly what reduced motion asks us to
+     stop. The text stays readable in place. */
+  .scrollContent {
+    animation: none;
+  }
+}

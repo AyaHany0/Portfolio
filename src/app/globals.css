@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: linear-gradient(135deg, #151515 0%, #101010 100%);
+  color: #ffffff;
+}
+
+.active {
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+}
+@layer components {
+  .com-card {
+    @apply bg-card-dark p-5 md:p-6 shadow-2xl rounded-3xl border-border border-[0.5px];
+  }
+}
+@layer components {
+  .com-revcard {
+    @apply bg-card-reverseDark p-5 md:p-6 shadow-2xl rounded-3xl border-border border-[0.5px];
+  }
+}
+@layer components {
+  .hovering {
+    @apply hover:shadow-lg hover:shadow-primary transition-shadow duration-300;
+  }
+}
+
+.group {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 40%;
+  height: 200%;
+  filter: blur(10px);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  /* The sweep used to animate `left` from -50% to 100%, which recalculates
+     layout on every frame, on all thirteen cards of the home page. It is now a
+     `translateX` of the same distance: the element is 40% of the card wide, so
+     375% of its own width equals the 150% of card width it used to travel.
+     `skewX` first then `translateX` is safe — a skew leaves a purely horizontal
+     translation unchanged — so the sweep looks identical.
+     Animating transform/opacity also lets the compositor rasterize the blurred
+     gradient once and just move that layer, instead of re-blurring each frame. */
+  transform: skewX(-50deg) translateX(0);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  opacity: 0;
+}
+
+.group:hover .shine-effect {
+  transform: skewX(-50deg) translateX(375%);
+  opacity: 1;
+  /* Hinted only while hovering, so thirteen idle cards are not each holding a
+     permanently promoted compositor layer. */
+  will-change: transform, opacity;
+}
+
+/* 404 digits dropping in, replacing a GSAP `bounce.out` tween so the not-found
+   route no longer ships the animation library just for this. Keyframes start
+   before the first paint, so unlike the tween there is nothing to flash. */
+.drop-bounce {
+  animation: drop-bounce 1.5s cubic-bezier(0.28, 0.84, 0.42, 1) both;
+}
+.drop-bounce:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.drop-bounce:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes drop-bounce {
+  0% {
+    transform: translateY(-100vh);
+  }
+  55% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-18%);
+  }
+  82% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-7%);
+  }
+  96% {
+    transform: translateY(0);
+  }
+  98% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Purely decorative motion: remove it rather than shortening it. */
+  .shine-effect {
+    display: none;
+  }
+
+  .drop-bounce {
+    animation: none;
+  }
+}
