@@ -1,7 +1,7 @@
 // Single source of truth for absolute URLs and identity used by metadata,
 // the sitemap, robots and the JSON-LD graph.
 export const siteConfig = {
-  url: "https://portfolio-delta-pied-34.vercel.app",
+  url: "https://portfolio-oett.vercel.app",
   name: "Aya Hany",
   handle: "@ayah28603",
   siteName: "Aya's Portfolio",

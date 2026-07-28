@@ -25,6 +25,9 @@ export const metadata = {
     "portfolio",
   ],
   alternates: { canonical: "/" },
+  verification: {
+    google: "y8ihb6FQnkdj5NZhjGATc8ofrfOCKTM-YhqzEeHxblI",
+  },
   openGraph: {
     type: "website",
     siteName: siteConfig.siteName,
