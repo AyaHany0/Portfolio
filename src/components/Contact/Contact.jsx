@@ -39,7 +39,7 @@ export default function Contact() {
                 subject: values.subject,
                 message: values.message,
               },
-              "gHavnqOTeI7VGtZ5N"
+              "gHavnqOTeI7VGtZ5N",
             )
             .then(
               (confirmationResult) => {
@@ -53,7 +53,7 @@ export default function Contact() {
                   variant: "warning",
                   autoHideDuration: 3000,
                 });
-              }
+              },
             );
 
           setSubmitting(false);
@@ -65,7 +65,7 @@ export default function Contact() {
             autoHideDuration: 3000,
           });
           setSubmitting(false);
-        }
+        },
       );
   };
 
@@ -85,11 +85,8 @@ export default function Contact() {
       .min(5, "Message length must be more than 4 letters!"),
   });
 
-
   return (
-    <div
-      className="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl max-w-md mx-auto p-4 space-y-5"
-    >
+    <div className="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl max-w-md mx-auto p-4 space-y-5">
       {/* Contact and Social Info Section */}
       <h1 className="sr-only">Contact Aya Hany</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-5 justify-between">
@@ -141,7 +138,7 @@ export default function Contact() {
               </li>
               <li className=" p-5 rounded-full bg-card-reverseDark hover:bg-card-light hover:text-black transition-colors duration-200">
                 <a
-                  href="https://linkedin.com/in/aya-hany-8b457a172"
+                  href="https://www.linkedin.com/in/aya-hany-web-developer"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Aya Hany on LinkedIn, opens in a new tab"

@@ -11,7 +11,7 @@ export const siteConfig = {
   locale: "en_US",
   country: "Egypt",
   github: "https://github.com/AyaHany0",
-  linkedin: "https://linkedin.com/in/aya-hany-8b457a172",
+  linkedin: "https://www.linkedin.com/in/aya-hany-web-developer",
 };
 
 /**
@@ -53,9 +53,13 @@ export function buildMetadata({ title, description, path, type = "website" }) {
   };
 }
 
-// Routes that should appear in the sitemap. The `/works/project` and
-// `/blog/articles` stubs are deliberately excluded — they are placeholders and
-// are marked noindex on the page itself.
+// Fixed routes that should appear in the sitemap. The per-project
+// `/works/[slug]` pages are appended in `app/sitemap.js` from the project data,
+// rather than restated here — this module is imported by the layout, robots and
+// every page's metadata, and has no business pulling in the content records.
+//
+// The `/blog/articles` stub is deliberately excluded — it is a placeholder and
+// is marked noindex on the page itself.
 export const indexableRoutes = [
   { path: "/", priority: 1.0, changeFrequency: "monthly" },
   { path: "/about", priority: 0.9, changeFrequency: "monthly" },

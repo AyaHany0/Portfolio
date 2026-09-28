@@ -1,26 +1,19 @@
 import React from "react";
-import InterfaceComp from "../Home/smallComp/InterfaceComp";
-import mealify from "../../assets/projects/mealify.png";
-import VivaDecor from "../../assets/projects/vivadecor.png";
-import blooming from "../../assets/projects/blooming.png";
-import yummy from "../../assets/projects/yummy.png";
-import todolist from "../../assets/projects/todolist.png";
-import solar from "../../assets/projects/solar.png";
-import dinafarms from "../../assets/projects/dinafarms.png";
-import john from "../../assets/projects/john.png";
-import bazel from "../../assets/projects/bazel.png";
-import games from "../../assets/projects/games.png";
-import weather from "../../assets/projects/weather.png";
-import simon from "../../assets/projects/simon.png";
-import freshcart from "../../assets/projects/freshcart.png";
-import mathil from "../../assets/projects/mathil.png";
-import sjc from "../../assets/projects/sjc.png";
-
 import Reveal from "../Reveal/Reveal";
+import ProjectCard from "./ProjectCard";
+import WorksFilter from "./WorksFilter";
+import { projects, techFilters } from "@/data/projects";
+import { siteConfig } from "@/lib/site";
 
 // One trigger for the whole grid, with the stagger doing the sequencing. The
 // `.animate` marker used to sit on the grid wrapper, where it matched a single
 // element and the stagger silently did nothing.
+//
+// `clearProps` matters here: the tween animates `y` and `scale`, so GSAP leaves
+// `transform: translate(0px, 0px) scale(1, 1)` inline on every card forever,
+// which outranks Tailwind's `hover:scale-105` and kills the hover. The tween's
+// end state is identical to the CSS default, so clearing it is free and hands
+// styling control back to the class list.
 const revealGroups = [
   {
     selector: ".animate",
@@ -33,9 +26,24 @@ const revealGroups = [
       duration: 1.8,
       stagger: 0.1,
       ease: "power3.out",
+      clearProps: "all",
     },
   },
 ];
+
+// Static markup, so it survives filtering untouched — the client only ever
+// toggles a class, it never removes a card from the document.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Selected works",
+  itemListElement: projects.map((project, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: project.title,
+    url: `${siteConfig.url}/works/${project.slug}`,
+  })),
+};
 
 export default function Works() {
   return (
@@ -43,126 +51,28 @@ export default function Works() {
       groups={revealGroups}
       className="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl max-w-md mx-auto p-4 "
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="sr-only">Selected works</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-        <div className="col-span-1 space-y-5 ">
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              about="Web Development"
-              title="sjctanseiq"
-              path="https://sjctanseiq.com"
-              img={sjc}
-            />
-          </div>
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              title="Blooming"
-              about="Web Development"
-              path="https://ayahany0.github.io/Blooming/"
-              img={blooming}
-            />
-          </div>
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              title="Solar Company"
-              about="Web Development"
-              path="https://ayahany0.github.io/SolarCompany/"
-              img={solar}
-            />
-          </div>
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              title="Games"
-              about="Web Development"
-              path="https://ayahany0.github.io/Games"
-              img={games}
-            />
-          </div>
-          <div className="  com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              title="Say Simon"
-              about="Web Development"
-              path="https://ayahany0.github.io/Simon-Game"
-              img={simon}
-            />
-          </div>
-        </div>
-        <div className="gap-5 col-span-2 row-span-1 grid grid-cols-1 lg:grid-cols-2 ">
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              title="Mathil"
-              about="Web Development"
-              path="https://testing.mathil.sa/"
-              img={mathil}
-            />
-          </div>
-          <div className="justify-between com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              about="Web Development"
-              title="Fresh Cart"
-              path="https://fresh-cart-chi-nine.vercel.app/"
-              img={freshcart}
-            />
-          </div>
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              about="Web Development"
-              title="VivaDecor"
-              path="https://ayahany0.github.io/InteriorDesign"
-              img={VivaDecor}
-            />
-          </div>
 
-          <div className="com-card animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              about="Web Development"
-              title="Yummy"
-              path="https://ayahany0.github.io/Yummy"
-              img={yummy}
-            />
-          </div>
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              about="Web Development"
-              title="To Do List"
-              path="https://ayahany0.github.io/ToDoList"
-              img={todolist}
-            />
-          </div>
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              about="Web Development"
-              title="Dr.John Watson"
-              path="https://ayahany0.github.io/Dr.JohnWatson"
-              img={john}
-            />
-          </div>
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              about="Web Development"
-              title="Dina Farms"
-              path="https://ayahany0.github.io/ImageSlider/"
-              img={dinafarms}
-            />
-          </div>
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              about="Web Development"
-              title="bazel."
-              path="https://ayahany0.github.io/bazel"
-              img={bazel}
-            />
-          </div>
-          <div className="com-card  animate motion-safe:hover:scale-105 transition-transform duration-150 ">
-            <InterfaceComp
-              about="Web Development"
-              title="Weather"
-              path="https://ayahany0.github.io/Weather"
-              img={weather}
-            />
-          </div>
-        </div>
-      </div>
+      {/* The cards are built here, on the server, and handed to the client
+          filter as children — only the filter itself crosses the boundary. */}
+      <WorksFilter
+        filters={techFilters}
+        items={projects.map(({ slug, tech }) => ({ slug, tech }))}
+      >
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={project.slug}
+            project={project}
+            /* First card is the LCP element. Sound only because the grid always
+               renders unfiltered on load, so index 0 is guaranteed visible. */
+            priority={index === 0}
+          />
+        ))}
+      </WorksFilter>
     </Reveal>
   );
 }

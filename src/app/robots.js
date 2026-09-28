@@ -6,8 +6,8 @@ export default function robots() {
       {
         userAgent: "*",
         allow: "/",
-        // Placeholder routes with no real content.
-        disallow: ["/works/project", "/blog/articles"],
+        // Placeholder route with no real content.
+        disallow: ["/blog/articles"],
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,

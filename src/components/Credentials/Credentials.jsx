@@ -90,7 +90,7 @@ export default function Credentials() {
               </li>
               <li className=" icon p-4 bg-card-reverseDark rounded-full text-2xl hover:text-black hover:bg-light transition-colors duration-300">
                 <a
-                  href="https://linkedin.com/in/aya-hany-8b457a172"
+                  href="https://www.linkedin.com/in/aya-hany-web-developer"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Aya Hany on LinkedIn, opens in a new tab"

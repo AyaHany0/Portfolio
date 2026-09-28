@@ -49,10 +49,13 @@ src/
 │   ├── providers.jsx # Client-only providers (Notistack), kept out of the pages
 │   ├── page.jsx      # Home
 │   ├── about/ works/ services/ credentials/ contact/ blog/
+│   │   └── works/[slug]/     # Per-project case studies, statically generated
 │   ├── opengraph-image.jsx  # Generated 1200×630 social preview
 │   ├── sitemap.js robots.js # Both generated from src/lib/site.js
 │   └── not-found.jsx
 ├── components/       # One folder per component: JSX + its CSS module
+├── data/
+│   └── projects.js   # The 22 projects: copy, tech tags, links, images
 ├── lib/
 │   ├── site.js       # Single source of truth for URLs, identity, metadata
 │   └── animation.js  # Shared GSAP timelines
@@ -60,9 +63,9 @@ src/
 ```
 
 Pages under `app/` stay deliberately thin — each one sets its metadata and
-renders the matching component from `components/`. `works/project` and
-`blog/articles` are placeholder stubs: they're marked `noindex` and left out of
-the sitemap until there's real content behind them.
+renders the matching component from `components/`. `blog/articles` is a
+placeholder stub: it's marked `noindex` and left out of the sitemap until
+there's real content behind it.
 
 ---
 
@@ -159,10 +162,14 @@ npm start
 I’m continuously working to improve my portfolio. Here are some ideas for future updates:
 
 1. **Real Blog Content:** The `/blog` route and its article template are in place — next step is filling them with tutorials, insights, and experiences in web development.
-2. **Project Detail Pages:** `/works/project` is scaffolded and waiting on per-project case studies.
-3. **Light Mode:** Enhance accessibility and provide a personalized browsing experience.
-4. **Project Filter/Search:** Allow visitors to filter projects by technology or category.
-5. **CMS Integration:** Use a headless CMS to easily add new projects and updates.
+2. **Light Mode:** Enhance accessibility and provide a personalized browsing experience.
+3. **Project Search:** The technology filter is live; a free-text search across project copy would complement it.
+4. **CMS Integration:** Use a headless CMS to easily add new projects and updates.
+
+Shipped since the last revision:
+
+- ✅ **Project Detail Pages:** every project now has a case study at `/works/[slug]` with an overview, a contributions breakdown, tech-stack chips, and links to the live site and source.
+- ✅ **Project Filter:** `/works` filters by technology, with the facets derived from the project data so a filter that matches nothing can never appear.
 
 ---
 
