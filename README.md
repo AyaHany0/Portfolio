@@ -6,7 +6,7 @@ Welcome to my personal portfolio website! This is not just a showcase of my work
 
 ## 🌐 Live Demo
 
-✨ [Visit My Portfolio on Vercel](https://portfolio-oett.vercel.app/)
+✨ [Visit My Portfolio on Vercel](https://portfolio-nu-eight-29.vercel.app/)
 
 ✨ [Visit My Portfolio on Netlify](https://ayahsportfolio.netlify.app)
 
