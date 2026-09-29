@@ -4,7 +4,7 @@ import { buildMetadata } from "@/lib/site";
 export const metadata = buildMetadata({
   title: "Services",
   description:
-    "Web development, front-end development, UI/UX design, API integration, performance optimisation and web animations offered by Aya Hany.",
+    "Web and front-end development, dashboards, GIS map integration, API integration, real-time features, multilingual RTL sites, UI/UX design and web animations offered by Aya Hany.",
   path: "/services",
   type: "website",
 });

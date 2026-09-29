@@ -250,7 +250,7 @@ export default function Credentials() {
           <div className=" flex flex-col gap-5 ">
             <h2 className="font-heading font-semibold text-2xl  ">SKILLS</h2>
             <div className="flex flex-col gap-3 ">
-              <h3 className="job-title text-secondary font-medium text-xl  ">
+              <h3 className="job-title text-secondary font-medium text-xl">
                 Front-End Development
               </h3>
               <ul>
@@ -258,37 +258,96 @@ export default function Credentials() {
                   <span className="text-white font-semibold font-heading me-2 text-lg">
                     Languages:
                   </span>
-                  HTML, CSS, JavaScript.
-                  <span className="text-primary ms-1">(Advanced)</span>
+                  HTML, CSS, JavaScript
+                  <span className="text-primary ms-1">(Advanced)</span>, 
+                  TypeScript
+                  <span className="text-primary ms-1">(Advanced)</span>.
                 </li>
                 <li className="text-darkWhite skill">
                   <span className="text-white font-semibold font-heading me-2 text-lg">
                     Frameworks & Libraries:
                   </span>
-                  React<span className="text-primary ms-1">(Advanced)</span>,
-                  Next.js
-                  <span className="text-primary ms-1">(Intermediate)</span>,
-                  Tailwind CSS
-                  <span className="text-primary ms-1">(Advanced)</span>,
-                  Bootstrap
-                  <span className="text-primary ms-1">(Advanced)</span>, Framer
-                  Motion
-                  <span className="text-primary ms-1">(Intermediate)</span>
+                  React, Next.js (App Router)
+                  <span className="text-primary ms-1">(Advanced)</span>, 
+                  Vite, React Router
+                  <span className="text-primary ms-1">(Advanced)</span>.
+                </li>
+                <li className="text-darkWhite skill">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
+                    Styling & UI Kits:
+                  </span>
+                  Tailwind CSS, Bootstrap
+                  <span className="text-primary ms-1">(Advanced)</span>, 
+                  shadcn/ui, Radix UI, Material UI
+                  <span className="text-primary ms-1">(Intermediate)</span>.
                 </li>
                 <li className="text-darkWhite skill">
                   <span className="text-white font-semibold font-heading me-2 text-lg">
                     APIs & State Management:
                   </span>
-                  Axios<span className="text-primary ms-2">(Advanced)</span>,
-                  React Query
-                  <span className="text-primary ms-1">(Advanced)</span>, Context
-                  API
-                  <span className="text-primary ms-1">(Advanced)</span>, Redux &
+                  Axios, TanStack Query, Context API, Zustand
+                  <span className="text-primary ms-1">(Advanced)</span>, 
                   Redux Toolkit
-                  <span className="text-primary ms-1">(Intermediate)</span>
+                  <span className="text-primary ms-1">(Intermediate)</span>.
+                </li>
+                <li className="text-darkWhite skill">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
+                    Forms & Validation:
+                  </span>
+                  React Hook Form, Zod
+                  <span className="text-primary ms-1">(Advanced)</span>, 
+                  Formik, Yup
+                  <span className="text-primary ms-1">(Intermediate)</span>.
                 </li>
               </ul>
-              <h3 className="job-title text-secondary font-medium text-xl ">
+              <h3 className="job-title text-secondary font-medium text-xl">
+                Real-Time & Internationalization
+              </h3>
+              <ul>
+                <li className="text-darkWhite skill">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
+                    Real-Time:
+                  </span>
+                  SignalR, Socket.IO
+                  <span className="text-primary ms-1">(Intermediate)</span>.
+                </li>
+                <li className="text-darkWhite skill">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
+                    i18n:
+                  </span>
+                  next-intl, i18next, Arabic RTL layouts
+                  <span className="text-primary ms-1">(Advanced)</span>.
+                </li>
+              </ul>
+              <h3 className="job-title text-secondary font-medium text-xl">
+                Data Visualization & Reporting
+              </h3>
+              <ul>
+                <li className="text-darkWhite skill">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
+                    Charts & Maps:
+                  </span>
+                  Recharts, Chart.js
+                  <span className="text-primary ms-1">(Advanced)</span>, 
+                  Plotly, FullCalendar
+                  <span className="text-primary ms-1">(Intermediate)</span>.
+                </li>
+                <li className="text-darkWhite skill">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
+                    GIS & Maps:
+                  </span>
+                  ArcGIS Maps SDK, React Leaflet
+                  <span className="text-primary ms-1">(Intermediate)</span>.
+                </li>
+                <li className="text-darkWhite skill">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
+                    Exports:
+                  </span>
+                  ExcelJS, SheetJS, jsPDF
+                  <span className="text-primary ms-1">(Intermediate)</span>.
+                </li>
+              </ul>
+              <h3 className="job-title text-secondary font-medium text-xl">
                 Design & UI
               </h3>
               <ul>
@@ -297,53 +356,51 @@ export default function Credentials() {
                     Tools:
                   </span>
                   Figma
-                  <span className="text-primary ms-1">(Advanced)</span>
+                  <span className="text-primary ms-1">(Advanced)</span>, 
                   Adobe XD
-                  <span className="text-primary ms-1">(Intermediate)</span>
+                  <span className="text-primary ms-1">(Intermediate)</span>.
                 </li>
                 <li className="text-darkWhite skill">
                   <span className="text-white font-semibold font-heading me-2 text-lg">
                     Principles:
                   </span>
                   Responsive Design, User-Centered Design, Accessibility
-                  <span className="text-primary ms-1">(Proficient)</span>
+                  <span className="text-primary ms-1">(Proficient)</span>.
                 </li>
               </ul>
-              <h3 className="job-title text-secondary font-medium text-xl ">
-                Validation & Form Handling
+              <h3 className="job-title text-secondary font-medium text-xl">
+                Animations & Effects
               </h3>
               <ul>
                 <li className="text-darkWhite skill">
-                  <span className="text-white font-semibold font-heading me-2 text-lg ">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
                     Libraries:
                   </span>
-                  Formik, Yup
-                  <span className="text-primary ms-1">(Intermediate)</span>
+                  GSAP, Framer Motion
+                  <span className="text-primary ms-1">(Intermediate)</span>.
                 </li>
               </ul>
-              <h3 className="job-title text-secondary font-medium text-xl ">
-                Version Control & Collaboration
+              <h3 className="job-title text-secondary font-medium text-xl">
+                Testing, Tooling & Collaboration
               </h3>
               <ul>
+                <li className="text-darkWhite skill">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
+                    Testing:
+                  </span>
+                  Vitest, React Testing Library, Storybook
+                  <span className="text-primary ms-1">(Intermediate)</span>.
+                </li>
                 <li className="text-darkWhite skill">
                   <span className="text-white font-semibold font-heading me-2 text-lg">
                     Tools:
                   </span>
                   Git, GitHub
-                  <span className="text-primary ms-1">(advanced)</span>, Jira
-                  <span className="text-primary ms-1">(Basic)</span>
-                </li>
-              </ul>
-              <h3 className="job-title text-secondary font-medium text-xl ">
-                Animations & Effects:
-              </h3>
-              <ul>
-                <li className="text-darkWhite skill">
-                  <span className="text-white font-semibold font-heading me-2 text-lg">
-                    Libraries:
-                  </span>
-                  Framer Motion, Typewriter Effect, React Simple Typewriter
-                  <span className="text-primary ms-1">(Intermediate)</span>
+                  <span className="text-primary ms-1">(Advanced)</span>, 
+                  GitHub Actions
+                  <span className="text-primary ms-1">(Intermediate)</span>, 
+                  Jira
+                  <span className="text-primary ms-1">(Basic)</span>.
                 </li>
               </ul>
               <h3 className="job-title text-secondary font-medium text-xl">
@@ -361,6 +418,13 @@ export default function Credentials() {
                     Code Optimization:
                   </span>
                   Focused on writing clean, reusable code
+                </li>
+                <li className="text-darkWhite skill">
+                  <span className="text-white font-semibold font-heading me-2 text-lg">
+                    Back-End Understanding:
+                  </span>
+                  Working knowledge of Node.js, Express, MongoDB and REST API
+                  design, to collaborate effectively with back-end teams
                 </li>
                 <li className="text-darkWhite skill">
                   <span className="text-white font-semibold font-heading me-2 text-lg">

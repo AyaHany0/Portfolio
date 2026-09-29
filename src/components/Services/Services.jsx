@@ -5,8 +5,9 @@ import {
   MdDashboard,
   MdDeveloperMode,
   MdOutlineDesignServices,
+  MdTranslate,
 } from "react-icons/md";
-import { FaLaptopCode } from "react-icons/fa";
+import { FaLaptopCode, FaMapMarkedAlt } from "react-icons/fa";
 import { CiPlug1 } from "react-icons/ci";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { BsMagic } from "react-icons/bs";
@@ -67,6 +68,69 @@ const revealGroups = [
   },
 ];
 
+const services = [
+  {
+    icon: MdDeveloperMode,
+    title: "Web Development",
+    description:
+      "Building complete, production-ready web applications with Next.js and React. I also understand how the back end works, so I integrate smoothly with any API team and speak their language when designing data flows.",
+  },
+  {
+    icon: FaLaptopCode,
+    title: "Front-End Development",
+    description:
+      "Developing fast, responsive interfaces with React, Next.js (App Router) and TypeScript. Typed, reusable components styled with Tailwind CSS, shadcn/ui, Radix UI or Material UI.",
+  },
+  {
+    icon: MdDashboard,
+    title: "Dashboards & Admin Panels",
+    description:
+      "Data-heavy dashboards, ERP and back-office web clients: interactive charts, filterable tables, calendars, and Excel and PDF exports that turn raw data into decisions.",
+  },
+  {
+    icon: FaMapMarkedAlt,
+    title: "GIS Integration",
+    description:
+      "Integrating interactive maps into web apps with the ArcGIS Maps SDK and React Leaflet — map layers, markers, spatial data visualization and location-based features built right into your dashboards.",
+  },
+  {
+    icon: CiPlug1,
+    title: "API Integration & Real-Time",
+    description:
+      "Connecting apps to external services with Axios and TanStack Query — caching, retries and optimistic updates — plus live features like chat and notifications over SignalR and Socket.IO.",
+  },
+  {
+    icon: MdOutlineDesignServices,
+    title: "UI/UX Design",
+    description:
+      "Crafting intuitive, visually engaging interfaces in Figma, from wireframes to a finished design system, making sure every element serves the user experience.",
+  },
+  {
+    icon: MdTranslate,
+    title: "Multilingual & RTL Websites",
+    description:
+      "Shipping Arabic and English experiences with next-intl and i18next, including full right-to-left layouts, localized routing and locale-aware formatting.",
+  },
+  {
+    icon: BsMagic,
+    title: "Web Animations",
+    description:
+      "Bringing websites to life with GSAP scroll-driven animations and Framer Motion transitions that make the experience more engaging without hurting performance.",
+  },
+  {
+    icon: AiFillThunderbolt,
+    title: "Performance Optimization",
+    description:
+      "Improving speed and Core Web Vitals through server rendering, code splitting, image optimization and smart data caching for faster load times and better SEO.",
+  },
+  {
+    icon: GiMagnifyingGlass,
+    title: "Testing & Maintenance",
+    description:
+      "Keeping projects reliable with Vitest and React Testing Library, Storybook-documented components, CI with GitHub Actions, and ongoing updates, fixes and enhancements.",
+  },
+];
+
 export default function Services() {
   return (
     <Reveal
@@ -77,47 +141,14 @@ export default function Services() {
         <div className="col-span-1 md:col-span-1 gap-5  ">
           <aside className="com-card col-span-1 lg:sticky lg:top-16 lg:h-fit">
             <ul className="flex flex-col justify-between  gap-10">
-              <li className=" flex justify-between ">
-                <MdDeveloperMode className="text-3xl icon" />
-                <p className="text-md font-medium headings">Wev Development</p>
-              </li>
-              <li className=" flex justify-between  ">
-                <FaLaptopCode className="text-3xl icon" />
-                <p className="text-md font-medium headings">
-                  Front-End Development
-                </p>
-              </li>
-              <li className=" flex justify-between  ">
-                <MdOutlineDesignServices className="text-3xl icon " />
-                <p className="text-md font-medium headings">UI/UX Design</p>
-              </li>
-              <li className=" flex justify-between  ">
-                <CiPlug1 className="text-3xl icon" />
-                <p className="text-md font-medium headings">API Integration</p>
-              </li>
-              <li className=" flex justify-between  ">
-                <AiFillThunderbolt className="text-3xl icon" />
-                <p className="text-md font-medium headings">
-                  Performance Optimization
-                </p>
-              </li>
-              <li className=" flex justify-between  ">
-                <BsMagic className="text-3xl icon" />
-                <p className="text-md font-medium headings">Web Animations</p>
-              </li>
-
-              <li className=" flex justify-between  ">
-                <MdDashboard className="text-3xl icon" />
-                <p className="text-md font-medium headings">
-                  Website Maintenance
-                </p>
-              </li>
-              <li className=" flex justify-between">
-                <GiMagnifyingGlass className="text-3xl icon" />
-                <p className="text-md font-medium headings">
-                  Testing and Debugging
-                </p>
-              </li>
+              {services.map(({ icon: Icon, title }) => (
+                <li key={title} className=" flex justify-between gap-3">
+                  <Icon className="text-3xl icon shrink-0" />
+                  <p className="text-md font-medium headings text-end">
+                    {title}
+                  </p>
+                </li>
+              ))}
             </ul>
           </aside>
         </div>
@@ -133,87 +164,17 @@ export default function Services() {
             </div>
           </div>
           <div className="com-card col-span-1 grid grid-cols-2 gap-5">
-            <div className=" com-revcard col-span-2 md:col-span-1 flex flex-col gap-3  card">
-              <h2 className="text-primary font-medium font-heading">
-                Web Development
-              </h2>
-              <p className="text-darkWhite font-body">
-                Creating fully responsive, user-friendly websites that function
-                seamlessly across all devices. I focus on building clean,
-                efficient code for optimal performance and usability.
-              </p>
-            </div>
-            <div className=" com-revcard col-span-2 md:col-span-1 flex flex-col gap-3  card">
-              <h2 className="text-primary font-medium font-heading">
-                Front-End Development
-              </h2>
-              <p className="text-darkWhite font-body">
-                Building visually appealing, interactive front-end applications
-                using HTML, CSS, JavaScript, and React. I prioritize delivering
-                a smooth user experience, blending aesthetics with
-                functionality.
-              </p>
-            </div>
-            <div className="com-revcard col-span-2 md:col-span-1 flex flex-col gap-3  card">
-              <h2 className="text-primary font-medium font-heading">
-                UI/UX Design
-              </h2>
-              <p className="text-darkWhite font-body">
-                Crafting intuitive and visually engaging interfaces that enhance
-                user interaction. From wireframes to final design, I ensure
-                every element serves the user experience effectively.
-              </p>
-            </div>
-            <div className="com-revcard col-span-2 md:col-span-1 flex flex-col gap-3  card">
-              <h2 className="text-primary font-medium font-heading">
-                API Integration
-              </h2>
-              <p className="text-darkWhite font-body">
-                Connecting applications to external APIs and ensuring smooth
-                data handling for dynamic content. Skilled in using tools like
-                Axios to create seamless integrations that bring additional
-                functionality to your project.
-              </p>
-            </div>
-            <div className="com-revcard col-span-2 md:col-span-1 flex flex-col gap-3  card">
-              <h2 className="text-primary font-medium font-heading">
-                Performance Optimization
-              </h2>
-              <p className="text-darkWhite font-body">
-                CImproving website speed and efficiency through best practices
-                in code optimization, reducing load times, and enhancing the
-                overall user experience.
-              </p>
-            </div>
-            <div className="com-revcard col-span-2 md:col-span-1 flex flex-col gap-3 card ">
-              <h2 className="text-primary font-medium font-heading">
-                Web Animations
-              </h2>
-              <p className="text-darkWhite font-body">
-                Adding interactive animations with tools like Framer Motion to
-                bring your website to life and make the user experience more
-                engaging and enjoyable.
-              </p>
-            </div>
-            <div className="com-revcard col-span-2 md:col-span-1 flex flex-col gap-3  card">
-              <h2 className="text-primary font-medium font-heading">
-                Website Maintenance
-              </h2>
-              <p className="text-darkWhite font-body">
-                Offering ongoing support and updates to keep your website
-                secure, up-to-date, and fully functional, with timely fixes and
-                enhancements as needed.
-              </p>
-            </div>
-            <div className="com-revcard col-span-2 md:col-span-1 flex flex-col gap-3 card ">
-              <h2 className="text-primary font-medium font-heading">
-                Testing and Debugging
-              </h2>
-              <p className="text-darkWhite font-body">
-                Ensuring seamless functionality and optimal code quality by
-                identifying and resolving issues efficiently.
-              </p>
-            </div>
+            {services.map(({ title, description }) => (
+              <div
+                key={title}
+                className="com-revcard col-span-2 md:col-span-1 flex flex-col gap-3 card"
+              >
+                <h2 className="text-primary font-medium font-heading">
+                  {title}
+                </h2>
+                <p className="text-darkWhite font-body">{description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
